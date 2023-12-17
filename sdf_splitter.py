@@ -59,9 +59,9 @@ if __name__ == "__main__":
                 if(os.path.exists("./"+foldername+"/"+output)):
                     output=output[:-4]+"_DUP_"+str(file_count)+".sdf"
                 try:
-                    file = open("./"+foldername+"/"+output, "w")
+                    file = open("./"+foldername+"/"+output, "w", encoding="cp932")
                 except:
-                    file = open("./"+foldername+"/UNKNOWN_"+str(file_count)+".sdf", "w")
+                    file = open("./"+foldername+"/UNKNOWN_"+str(file_count)+".sdf", "w", encoding="cp932")
                 file.write(string)
                 file.close()
                 if args.verbose:
